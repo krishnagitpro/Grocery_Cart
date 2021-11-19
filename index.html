@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8"> <!----------------------------------------------HEAD BEGIN---------------------------------------------------------------------------->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--------------------------- Bootstrap CSS File START---------------->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <!-- --------------------------Bootstrap CSS File END----------------->
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="/Images/Favicon/title_icon2.png">
+    <title>GROCERY CART</title>
+
+</head><!------------------------------------------------------------------HEAD END----------------------------------------------------------------------------->
+
+
+
+<body class="index"> <!---------------------------------------------------BODY BEGIN---------------------------------------------------------------------------->
+
+  <!--HEADER BEGIN-->
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+      <div class="container justify-content-center">
+        <h3 class="header-h3 justify-content-center">GROCERY CART</h3>
+      </div>
+    </nav>
+  <!--HEADER END-->
+
+  <div class="container">
+
+    <table class="table table-striped" id="grocery-table">
+
+      <thead>
+        <tr>
+          <th class="table-header" scope="col">Sl No</th>
+          <th class="table-header" scope="col">ITEM</th>
+          <th class="table-header" scope="col">QUANTITY</th>
+          <th class="table-header" scope="col">UNIT</th>
+          <th class="table-header" scope="col">DEPARTMENT</th>
+          <th class="table-header" scope="col">NOTES</th>
+          <th class="table-header" scope="col">STATUS</th>
+          <th class="table-header" scope="col">SELECT</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><form><label class="form-label table-label" for="Sl">1</label></form></td>
+          <td><form><input type="text" class="form-control table-input" placeholder="Item Name"></form></td>
+          <td><form><input type="text" class="form-control table-input" placeholder="Quantity"></form></td>
+          <td><form>
+                <select class="form-select table-select" aria-label="Default select example">
+                  <option selected>--Select--</option>
+                  <option>Kilogram</option>
+                  <option>Gram</option>
+                  <option>Litre</option>
+                  <option>Milli-litre</option>
+                  <option>Numbers</option>
+                  <option>Packets</option>
+                </select>
+              </form>
+          </td>
+          <td><form><input type="text" class="form-control table-input" placeholder="Department"></form></td>
+          <td><form><input type="text" class="form-control table-input" placeholder="Comments"></form></td>
+          <td><form><input type="checkbox" class="form-check-input justify-content-center table-checkbox" value="" id="flexCheckDefault"></form></td>
+          <td>
+            <form>
+              <button class="table-button" onclick="addItem()">+</button>
+              <button class="table-button" onclick="editItem()">/</button>
+              <button class="table-button" onclick="removeItem()">-</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+  </div>
+
+
+  
+    <!--------------------------------------------------------------- Font Awesome JS File START-->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!--------------------------------------------------------------- Font Awesome JS File END-->
+
+    <!--------------------------------------------------------------- Bootstrap JS File START-->
+    <script src="Bootstrap/js/jquery.slim.min.js"></script>
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.js"></script>
+    <!--------------------------------------------------------------- Bootstrap JS File END---->
+
+    <script src="JS/server.js"></script>
+
+</body> <!------------------------------------------------------------------ BODY END----------------------------------------------------------------------------->
+
+
+
+</html>
