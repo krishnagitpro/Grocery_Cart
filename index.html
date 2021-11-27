@@ -16,11 +16,13 @@
     <link rel="icon" type="image/x-icon" href="/Images/Favicon/title_icon2.png">
     <title>GROCERY CART</title>
 
+    <script src="JS/script.js"></script>
+
 </head><!------------------------------------------------------------------HEAD END----------------------------------------------------------------------------->
 
 
 
-<body class="index"> <!---------------------------------------------------BODY BEGIN---------------------------------------------------------------------------->
+<body class="index" onload="grocery()"> <!---------------------------------------------------BODY BEGIN---------------------------------------------------------------------------->
 
   <!--HEADER BEGIN-->
     <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
@@ -30,13 +32,22 @@
     </nav>
   <!--HEADER END-->
 
-  <div class="container">
+  <div class="gtable">
+  </div>
+  <div class="content">
+      <!-- <h1 class="heading">GROCERY LIST</h1> <br><br>
+      <P>Click below to start..</P><br>
+      <button class="button" onclick="grocery()">Start</button> -->
+  </div> 
+
+
+  <!-- <div class="container">
 
     <table class="table table-striped" id="grocery-table">
 
       <thead>
         <tr>
-          <th class="table-header" scope="col">Sl No</th>
+          <th class="table-header" scope="col">Sl</th>
           <th class="table-header" scope="col">ITEM</th>
           <th class="table-header" scope="col">QUANTITY</th>
           <th class="table-header" scope="col">UNIT</th>
@@ -49,12 +60,15 @@
 
       <tbody>
         <tr>
-          <td><form><label class="form-label table-label" for="Sl">1</label></form></td>
-          <td><form><input type="text" class="form-control table-input" placeholder="Item Name"></form></td>
-          <td><form><input type="text" class="form-control table-input" placeholder="Quantity"></form></td>
-          <td><form>
-                <select class="form-select table-select" aria-label="Default select example">
-                  <option selected>--Select--</option>
+          <form id="table-form" onsubmit="return addItem(),editItem(),removeItem()">
+
+              <td><label class="form-label table-label" id="sl_label" for="Sl">1</label></td>
+              <td><input type="text" class="form-control table-input" id="item_input" placeholder="Item Name"></td>
+              <td><input type="text" class="form-control table-input" id="qty_input" placeholder="Quantity"></td>
+
+              <td>
+                <select class="form-select table-select" id="unit_select">
+                  <option selected>-select-</option>
                   <option>Kilogram</option>
                   <option>Gram</option>
                   <option>Litre</option>
@@ -62,30 +76,31 @@
                   <option>Numbers</option>
                   <option>Packets</option>
                 </select>
-              </form>
-          </td>
-          <td><form><input type="text" class="form-control table-input" placeholder="Department"></form></td>
-          <td><form><input type="text" class="form-control table-input" placeholder="Comments"></form></td>
-          <td><form><input type="checkbox" class="form-check-input justify-content-center table-checkbox" value="" id="flexCheckDefault"></form></td>
-          <td>
-            <form>
-              <button class="table-button" onclick="addItem()">+</button>
-              <button class="table-button" onclick="editItem()">/</button>
-              <button class="table-button" onclick="removeItem()">-</button>
-            </form>
-          </td>
+              </td>
+
+              <td><input type="text" class="form-control table-input" id="dept_input" placeholder="Department"></td>
+              <td><input type="text" class="form-control table-input" id="cmt_input" placeholder="Comments"></td>
+              <td><input type="checkbox" class="form-check-input justify-content-center table-checkbox" value="" id="flexCheckDefault" onclick="markLine()"></td>
+
+              <td>
+                <button class="table-button" onclick="addItem()">+</button>
+                <button class="table-button" onclick="editItem()">/</button>
+                <button class="table-button" onclick="removeItem()">-</button>
+              </td>
+
+          </form>
         </tr>
       </tbody>
 
     </table>
 
 
-  </div>
+  </div> -->
 
 
   
     <!--------------------------------------------------------------- Font Awesome JS File START-->
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
     <!--------------------------------------------------------------- Font Awesome JS File END-->
 
     <!--------------------------------------------------------------- Bootstrap JS File START-->
@@ -94,7 +109,7 @@
     <script src="Bootstrap/js/bootstrap.js"></script>
     <!--------------------------------------------------------------- Bootstrap JS File END---->
 
-    <script src="JS/server.js"></script>
+    
 
 </body> <!------------------------------------------------------------------ BODY END----------------------------------------------------------------------------->
 
